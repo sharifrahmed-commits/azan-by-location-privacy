@@ -4,21 +4,185 @@
   <meta charset="utf-8">
   <title>Azan by Location Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f7f5ee;
+      --card: rgba(255, 255, 255, 0.88);
+      --primary: #0e5a42;
+      --accent: #c6a94e;
+      --text: #17342c;
+      --muted: #5d6c66;
+      --border: rgba(198, 169, 78, 0.28);
+      --shadow: 0 24px 60px rgba(14, 90, 66, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(198,169,78,0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(14,90,66,0.12), transparent 30%),
+        linear-gradient(180deg, #fbfaf5 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.7);
+      object-fit: cover;
+      background: white;
+    }
+
+    h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .card {
+      margin-top: 28px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 0 0 14px;
+      line-height: 1.7;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(14, 90, 66, 0.08);
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+
+    .button.primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .wrap { padding-top: 32px; }
+      .card { padding: 22px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Azan by Location Support</h1>
-  <p>If you need help with Azan by Location, have a bug report, or have questions about prayer times, notifications, or app settings, please contact:</p>
-  <p><strong>Email:</strong> sharif.r.ahmed@gmail.com</p>
+  <main class="wrap">
+    <section class="hero">
+      <img
+        class="icon"
+        src="https://raw.githubusercontent.com/sharifrahmed-commits/azan-by-location-privacy/main/app-icon.png"
+        alt="Azan by Location app icon"
+        onerror="this.style.display='none'">
+      <h1>Azan by Location Support</h1>
+      <p class="subtitle">
+        Help with prayer times, notifications, manual location setup, Qibla features,
+        and general app questions.
+      </p>
+    </section>
 
-  <h2>Support Topics</h2>
-  <ul>
-    <li>Prayer time calculation issues</li>
-    <li>Location or manual location setup</li>
-    <li>Notification reminders</li>
-    <li>Qibla direction questions</li>
-    <li>General app support</li>
-  </ul>
+    <section class="card">
+      <h2>Contact Support</h2>
+      <p>If you need help, want to report an issue, or have a question about the app, contact:</p>
+      <a class="email" href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a>
 
-  <p><a href="./">Privacy Policy</a></p>
+      <div class="links">
+        <a class="button primary" href="mailto:sharif.r.ahmed@gmail.com">Email Support</a>
+        <a class="button secondary" href="./index.html">Privacy Policy</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Common Topics</h2>
+      <ul>
+        <li>Prayer time calculation questions</li>
+        <li>Location permission or manual location issues</li>
+        <li>Prayer reminder notifications</li>
+        <li>Qibla direction support</li>
+        <li>General app feedback or bug reports</li>
+      </ul>
+    </section>
+
+    <p class="footer">Azan by Location</p>
+  </main>
 </body>
 </html>
