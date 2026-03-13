@@ -1,45 +1,230 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Azan by Location - Privacy Policy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azan by Location Privacy Policy</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; line-height: 1.65; color: #1f2937; }
-    h1, h2 { color: #111827; }
-    small { color: #6b7280; }
-    ul { padding-left: 20px; }
+    :root {
+      --bg: #f7f5ee;
+      --card: rgba(255, 255, 255, 0.88);
+      --primary: #0e5a42;
+      --accent: #c6a94e;
+      --text: #17342c;
+      --muted: #5d6c66;
+      --border: rgba(198, 169, 78, 0.28);
+      --shadow: 0 24px 60px rgba(14, 90, 66, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(198,169,78,0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(14,90,66,0.12), transparent 30%),
+        linear-gradient(180deg, #fbfaf5 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.7);
+      object-fit: cover;
+      background: white;
+    }
+
+    h1 {
+      margin: 20px 0 10px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(14, 90, 66, 0.08);
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .card {
+      margin-top: 24px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 0 0 14px;
+      line-height: 1.75;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    li { margin-bottom: 8px; }
+
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+
+    .button.primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .email {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .wrap { padding-top: 32px; }
+      .card { padding: 22px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy - Azan by Location</h1>
-  <small>Last updated: February 26, 2026</small>
+  <main class="wrap">
+    <section class="hero">
+      <img
+        class="icon"
+        src="https://raw.githubusercontent.com/sharifrahmed-commits/azan-by-location-privacy/main/app-icon.png"
+        alt="Azan by Location app icon"
+        onerror="this.style.display='none'">
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">
+        Azan by Location helps users view prayer times, access Qibla features,
+        and receive prayer reminders based on location. No account is required.
+      </p>
+      <div class="updated">Last updated: March 13, 2026</div>
+    </section>
 
-  <p>Azan by Location helps users view prayer times and listen to Azan based on location. No account is required.</p>
+    <section class="card">
+      <h2>Information We Use</h2>
+      <ul>
+        <li><strong>Location (precise or approximate):</strong> Used to calculate prayer times, determine Qibla direction, and display local city information.</li>
+        <li><strong>Notifications:</strong> Used to send prayer-time alerts and reminders when enabled by the user.</li>
+      </ul>
+    </section>
 
-  <h2>Information We Use</h2>
-  <ul>
-    <li><strong>Location (precise or approximate):</strong> Used to calculate prayer times and display local city information.</li>
-    <li><strong>Notifications:</strong> Used to send prayer-time alerts when enabled by the user.</li>
-  </ul>
+    <section class="card">
+      <h2>How Data Is Stored</h2>
+      <p>
+        The app stores limited data locally on your device, including selected settings,
+        last known coordinates, and recently fetched prayer times for offline display
+        and scheduling continuity.
+      </p>
+    </section>
 
-  <h2>How Data Is Stored</h2>
-  <p>The app stores limited data locally on your device, including selected settings, last known coordinates, and recently fetched prayer times for offline display.</p>
+    <section class="card">
+      <h2>Data Sharing</h2>
+      <p>
+        We do not sell personal information. The app may call third-party services such as
+        prayer-time, geocoding, timezone, compass, or weather providers to deliver core functionality.
+        These requests are used to service the app experience.
+      </p>
+    </section>
 
-  <h2>Data Sharing</h2>
-  <p>We do not sell personal information. The app may call third-party APIs (for prayer times, geocoding, or weather) to provide core functionality.</p>
+    <section class="card">
+      <h2>Your Choices</h2>
+      <ul>
+        <li>You can deny location permission, but prayer-time accuracy and location-based features may be limited.</li>
+        <li>You can disable notifications at any time in the app’s settings or in your device settings.</li>
+        <li>You can use manual location selection instead of device location.</li>
+      </ul>
+    </section>
 
-  <h2>Your Choices</h2>
-  <ul>
-    <li>You can deny location permission, but prayer-time accuracy/features may be limited.</li>
-    <li>You can disable notifications at any time in app settings or device settings.</li>
-    <li>You can use manual location selection instead of device location.</li>
-  </ul>
+    <section class="card">
+      <h2>Children's Privacy</h2>
+      <p>
+        Azan by Location is intended for general audiences and does not knowingly collect
+        personal data from children.
+      </p>
+    </section>
 
-  <h2>Children's Privacy</h2>
-  <p>The app is intended for general audiences and does not knowingly collect personal data from children.</p>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, contact:
+        <a class="email" href="mailto:sharif.r.ahmed@gmail.com">sharif.r.ahmed@gmail.com</a>
+      </p>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this policy, contact: <strong>sharif.r.ahmed@gmail.com/strong></p>
+      <div class="links">
+        <a class="button primary" href="mailto:sharif.r.ahmed@gmail.com">Contact Support</a>
+        <a class="button secondary" href="./support.html">Support Page</a>
+      </div>
+    </section>
+
+    <p class="footer">Azan by Location</p>
+  </main>
 </body>
 </html>
